@@ -1,24 +1,15 @@
-import logo from "./logo.svg"
 import "./App.css"
 import { addRifle } from "./api/riflesApi"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
 
 function App() {
-    async function dd() {
-        console.log(await addRifle({}))
-    }
     return (
-        <div className="App">
-            <div>
-                test
-                <button
-                    onClick={() => {
-                        dd()
-                    }}
-                >
-                    add new rifle
-                </button>
-            </div>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
     )
 }
 

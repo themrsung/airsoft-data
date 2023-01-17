@@ -31,3 +31,10 @@ export const editPistolGrip = async (id, newPistolGrip) => {
 
     return res.data
 }
+
+export const deletePistolGrip = async (id) => {
+    const res = await axios.delete(`${SERVER_URL}/pistolGrips/${id}`)
+    if (!res) return
+
+    return res.data
+}
