@@ -1,6 +1,5 @@
 import axios from "axios"
-
-const SERVER_URL = "http://localhost:5000"
+import { SERVER_URL } from "./apiSettings"
 
 export const getRifles = async () => {
     const res = await axios.get(`${SERVER_URL}/rifles`)
