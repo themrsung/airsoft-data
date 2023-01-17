@@ -1,23 +1,23 @@
 import logo from "./logo.svg"
 import "./App.css"
+import { addRifle } from "./api/riflesApi"
 
 function App() {
+    async function dd() {
+        console.log(await addRifle({}))
+    }
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
+            <div>
+                test
+                <button
+                    onClick={() => {
+                        dd()
+                    }}
                 >
-                    Learn React
-                </a>
-            </header>
+                    add new rifle
+                </button>
+            </div>
         </div>
     )
 }
